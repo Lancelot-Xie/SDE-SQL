@@ -77,11 +77,10 @@ def connect_gpt(engine, prompt, max_tokens, temperature, n=1):
             client = OpenAI(api_key=os.environ.get('SILICONFLOW_API_KEY'), base_url="https://api.siliconflow.cn/v1")
             time.sleep(5)
         elif "deepseek" in engine:
-            #client = OpenAI(api_key="sk-e9e5438f17f443aab410c5082ad43fd4", base_url="https://api.deepseek.com/v1")
-            client = OpenAI(api_key="sk-cl5ENhvp4AvqsJaCh6UF30cYdXa7oJYHJbeOUQJJ2Ki1EAac", base_url="https://geekai.co/api/v1")
+            client = OpenAI(api_key="", base_url="https://geekai.co/api/v1")
             time.sleep(5)
         elif "qwen" in engine:
-            client = OpenAI(api_key="sk-9e9d054518d84d6daa4640683e1f53ce", base_url="https://dashscope.aliyuncs.com/compatible-mode/v1")
+            client = OpenAI(api_key="", base_url="https://dashscope.aliyuncs.com/compatible-mode/v1")
             time.sleep(5)
         else:  # openai的模型
             openai.debug = True
